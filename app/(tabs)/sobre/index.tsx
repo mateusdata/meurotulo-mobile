@@ -3,7 +3,7 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { AntDesign } from '@expo/vector-icons';
 import { useHeaderHeight } from '@react-navigation/elements';
-import { Linking, Pressable, StyleSheet } from 'react-native';
+import { Linking, Platform, Pressable, StyleSheet } from 'react-native';
 
 export default function SobreProjetoScreen() {
   const headerHeight = useHeaderHeight();
@@ -11,31 +11,31 @@ export default function SobreProjetoScreen() {
   return (
     <ThemedScrollView
       showsVerticalScrollIndicator={false}
-      contentContainerStyle={{ paddingTop: headerHeight, paddingBottom: 80 }}
+       contentContainerStyle={{ paddingTop: Platform.OS === 'ios' ? headerHeight : 0, paddingBottom: 80 }}
     >
       <ThemedView style={styles.container}>
-        <ThemedText type="title" style={styles.sectionTitle}>
+        <ThemedText type="subtitle" style={styles.sectionTitle}>
           Sobre o Projeto de Pesquisa
         </ThemedText>
         <ThemedText style={styles.paragraph}>
           A plataforma web "O que é isso no meu rótulo?" é fruto de um projeto de pesquisa para divulgação científica que consiste em um buscador de interface simples, e que permite às pessoas consultarem informações sobre origem e função dos ingredientes informados em rótulos de produtos utilizados no cotidiano, tais como produtos alimentícios, higiene pessoal, cosméticos e saneantes. Estamos constantemente atualizando a base de dados com novos ingredientes para que nossa plataforma esteja cada vez mais completa e útil para a sociedade.
         </ThemedText>
 
-        <ThemedText type="title" style={styles.sectionTitle}>
+        <ThemedText type="subtitle" style={styles.sectionTitle}>
           Qual a motivação?
         </ThemedText>
         <ThemedText style={styles.paragraph}>
           A lista de ingredientes pouco comunica ao público consumidor em geral, uma vez que trata-se de nomes técnicos, impressos em letras pequenas e que ainda podem aparecer em língua inglesa.
         </ThemedText>
 
-        <ThemedText type="title" style={styles.sectionTitle}>
+        <ThemedText type="subtitle" style={styles.sectionTitle}>
           O projeto
         </ThemedText>
         <ThemedText style={styles.paragraph}>
           Idealizado pelo professor Emanoel Igor da Silva Oliveira, pesquisador nos grupos NEPCENT e GEPMES, e atualmente, sob a coordenação do professor Raimundo Carvalho Rabelo Filho, pesquisador nos grupos NEPCENT e LAPSID, ambos do IFBA campus Feira de Santana, o projeto, em parceria com pesquisadores das áreas de Química e Ciência da Computação e a participação de estudantes de graduação e ensino médio, tem sido desenvolvido desde 2021 vinculado à editais de pesquisa e de fluxo contínuo, contando com o apoio da PRPGI/IFBA, através de bolsas no programa de iniciação científica e tecnológica.
         </ThemedText>
 
-        <ThemedText type="title" style={styles.sectionTitle}>
+        <ThemedText type="subtitle" style={styles.sectionTitle}>
           Participantes
         </ThemedText>
         <ThemedText style={styles.paragraph}>

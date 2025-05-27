@@ -4,7 +4,7 @@ import { ThemedView } from '@/components/ThemedView';
 import { Colors } from '@/constants/Colors';
 import { Ionicons } from '@expo/vector-icons';
 import { useHeaderHeight } from '@react-navigation/elements';
-import { Linking, Pressable, StyleSheet } from 'react-native';
+import { Linking, Platform, Pressable, StyleSheet } from 'react-native';
 
 export default function ContatoScreen() {
   const headerHeight = useHeaderHeight();
@@ -18,11 +18,7 @@ export default function ContatoScreen() {
   return (
     <ThemedScrollView
       showsVerticalScrollIndicator={false}
-      contentContainerStyle={{
-        paddingTop: headerHeight,
-        paddingBottom: 80,
-        paddingHorizontal: 20,
-      }}
+        contentContainerStyle={{   paddingHorizontal: 20, paddingTop: Platform.OS === 'ios' ? headerHeight : 10, paddingBottom: 80 }}
     >
       <ThemedView style={styles.container}>
         <ThemedText type="title" style={styles.title}>

@@ -1,9 +1,9 @@
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { Tabs } from 'expo-router';
 import React from 'react';
 import { Platform } from 'react-native';
 
 import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
@@ -17,7 +17,6 @@ export default function TabLayout() {
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].primary,
         headerTransparent: true,
         headerShown: false,
-      
         headerTintColor: "white",
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
@@ -33,7 +32,7 @@ export default function TabLayout() {
         options={{
           title: 'O que é isso no meu rótulo?',
           headerTitleAlign: 'center',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color, size }) => <Ionicons name="home" size={size ?? 28} color={color} />,
           tabBarLabel: 'Home',
         }}
       />
@@ -41,15 +40,14 @@ export default function TabLayout() {
         name="sobre"
         options={{
           title: 'Sobre',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="info.circle.fill" color={color} />,
+          tabBarIcon: ({ color, size }) => <Ionicons name="information-circle" size={size ?? 28} color={color} />,
         }}
       />
-
-       <Tabs.Screen
+      <Tabs.Screen
         name="contato"
         options={{
           title: 'contato',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="phone.and.waveform" color={color} />,
+          tabBarIcon: ({ color, size }) => <Ionicons name="call" size={size ?? 28} color={color} />,
         }}
       />
     </Tabs>
