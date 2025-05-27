@@ -1,19 +1,15 @@
 {
   "expo": {
-    "name": "meurotulomobile",
-    "slug": "meurotulomobile",
+    "name": "Meu Rótulo ",
+    "slug": "rotulo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "meurotulomobile",
+    "scheme": "rotulo",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.mateusdata.meurotulomobile",
-      "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
-      }
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
@@ -21,7 +17,7 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.mateusdata.meurotulomobile"
+      "package": "com.mateusdata.rotulo"
     },
     "web": {
       "bundler": "metro",
@@ -46,14 +42,14 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "7efff511-e1cf-4e6e-9246-890ce2448a39"
+        "projectId": "2ce33257-1ecf-49a9-aa52-2c481cc37597"
       }
     },
     "runtimeVersion": {
       "policy": "appVersion"
     },
     "updates": {
-      "url": "https://u.expo.dev/7efff511-e1cf-4e6e-9246-890ce2448a39"
+      "url": "https://u.expo.dev/2ce33257-1ecf-49a9-aa52-2c481cc37597"
     }
   }
 }
