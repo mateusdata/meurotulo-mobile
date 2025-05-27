@@ -14,30 +14,42 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].primary,
+        headerTransparent: true,
         headerShown: false,
+      
+        headerTintColor: "white",
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
-            // Use a transparent background on iOS to show the blur effect
             position: 'absolute',
           },
           default: {},
         }),
       }}>
       <Tabs.Screen
-        name="index"
+        name="home"
         options={{
-          title: 'Home',
+          title: 'O que é isso no meu rótulo?',
+          headerTitleAlign: 'center',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarLabel: 'Home',
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="sobre"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Sobre',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="info.circle.fill" color={color} />,
+        }}
+      />
+
+       <Tabs.Screen
+        name="contato"
+        options={{
+          title: 'contato',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="phone.and.waveform" color={color} />,
         }}
       />
     </Tabs>
