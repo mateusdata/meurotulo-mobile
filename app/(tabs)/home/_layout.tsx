@@ -16,7 +16,7 @@ export default function AdminLayout() {
           },
           headerTintColor: useColorScheme?.() !== 'dark' ? "white" : Colors.dark.text,
           headerBlurEffect: Platform.OS === 'ios' ? 'systemChromeMaterial' : undefined,
-          headerTitle: 'O que é isso no meu rótulo',
+          headerTitle: 'O que é isso no meu rótulo ?',
         }}
       />
     </Stack>
